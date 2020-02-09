@@ -17,3 +17,4 @@ npm install
 ```
 npm install <module_name> --save
 ```
+SSiE uses [Oxford Dictionary API](https://developer.oxforddictionaries.com/) services so you need to sign up in order to use get the API ID and key. For research purposes you can apply for the free package. Visit their website for more info.
