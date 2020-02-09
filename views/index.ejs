@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <% include partials/head %> 
+ <link rel="stylesheet" type="text/css" href="/stylesheets/indexStyle.css"> 
+ <script src="/javascipts/indexScript.js"></script>
+</head>
+<body>
+<% include partials/menu %>
+   
+<div class="welcome">Welcome!! <br> Let's learn together</div>
+<p class="intro"> Here, we encourage our users to learn and understand their course subjects in English rather than translating texts into their first-language to understand materials!</p>
+<h2 class="login">Login Form</h2>
+
+<!----------login------->
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto; margin-left:15px;">Login</button>
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="/images/img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+</body>
+<% include partials/script %>
+</html>

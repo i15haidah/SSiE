@@ -1,0 +1,131 @@
+﻿/*--------------------menu---------------------
+body {margin:0;}
+
+.icon-bar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.icon-bar a {
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 36px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #ADFF2F;
+}
+/*------------------end of menu----------------*/
+
+.start {
+	color:#2F4F4F;
+	font-size:15px;
+	font-family:Arial;
+	margin-left:30px;
+	text-align:left;
+}
+
+.title {
+	margin-left: 10px;
+	color: Green;
+	font-family:Arial;
+	}
+	
+.explain {
+	margin-left: 10px;
+	color: Green;
+	font-family:Arial;
+	}
+/*------------------------read button----------------------------*/
+body::before {
+  display: none;
+}
+.typ-subhed {
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+.ctrl-standard.fx-bubbleUp {
+  color: #9fa255;
+  border-color: #9fa255;
+}
+.ctrl-standard.fx-bubbleUp::after {
+  top: auto;
+  border-radius: $right-val1 $left-val1 0 0/$right-val2 $left-al2 0 0;
+  background: #9fa255;
+}
+[class*="ctrl-"] {
+  padding: 5ox 10px;
+  border-radius: 2px;
+  border: 1px solid #231f20;
+}
+[class*="ctrl-"][class*="fx-"]:hover,
+[class*="ctrl-"][class*="fx-"].active {
+  color: #231f20;
+}
+  [class*="fx-"],
+[class*="fx-"]:hover {
+    transition: color 0.5s  ease-in-out;
+  }
+  [class*="fx-"]:not(.fx-dyna) {
+    position: relative;
+    z-index: 1;
+    transition-delay: 0.2s !important;
+    overflow: hidden;
+  }
+  [class*="fx-"]:not(.fx-dyna)::after,
+[class*="fx-"]:not(.fx-dyna)::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+  }
+  [class*="fx-bubble"]::after {
+    transition: height 0.5s ease-in-out;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+  }
+  [class*="fx-bubble"]:hover::after,
+[class*="fx-bubble"].active::after {
+    transition: height 0.5s ease-in-out;
+    height: 300%;
+  }
+  [class*="fx-bubble"]:disabled:hover::after {
+    height: 0;
+  }
+/*---------------------end read button--------------------------*/
+#textinput {
+	width: 40%;
+	height: 150px;
+	padding: 12px 20px;
+	box-sizing: border-box;
+	border: 2px dotted #6DB72C;
+	border-radius: 4px;
+	background-color: #f6f0bb;
+	font-size: 16px;
+	margin-top: 10px;
+	margin-left: 50px;
+}
+
+#translate {
+	margin-top: 50px;
+	margin-left: 30px;
+	color: ForestGreen;
+	font-size:15px;
+	font-family:Arial;
+	text-align:left;
+}

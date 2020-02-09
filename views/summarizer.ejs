@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <% include partials/head %> 
+ <link rel="stylesheet" type="text/css" href="/stylesheets/summarizerStyle.css">
+<script src="/javascripts/dicTransScript.js"></script>
+</head>
+<body>
+<% include partials/menu %>
+
+<h1 class="title">Summarizer!</h1>
+<h3 class="explain">Summarize your text by reading and finding the main points so you can skip the unnecessary information and grasp the gist of your text to understand it easier </h3>
+<p class="start">Enter the text to be processed: </p>
+<textarea rows="6" cols="100" class="text_input" id="textinput"></textarea>
+<input type="button" onclick="getString()" value="Read">
+<p id="poutput"></p>
+
+</body>
+<% include partials/script %>
+</html>

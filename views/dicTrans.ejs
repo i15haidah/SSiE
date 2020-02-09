@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <% include partials/head %>
+ <link rel="stylesheet" type="text/css" href="/stylesheets/dicTransStyle.css"> 
+<script src="/javascripts/dicTransScript.js"></script> 
+</head>
+<body>
+<% include partials/menu %>
+
+<h1 class="title">Translator!</h1>
+<h3 class="explain">This page will translate each difficult words according to the difficulity level. Login in to find out your difficulty level!</h3>
+
+<p class="start">Enter the text to be processed: </p>
+<textarea rows="100" cols="50" class="text_input" id="textinput"></textarea>
+<button class="ctrl-standard typ-subhed fx-bubbleUp" onclick="getString()">READ</button>
+
+<p>Definitions:</p>
+<div id="translate"></div>
+
+</body>
+<% include partials/script %>
+</html>
