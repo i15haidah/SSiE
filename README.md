@@ -9,6 +9,11 @@ Some additional modules needed to be installed are <br>
 -- ssl-root-cas/latest <br>
 <br><br>
 Use [npm](https://www.npmjs.com/) to install node modules<br>
+<br> For basic modules use
+```
+npm install
+```
+<br>for additional modules use
 ```
 npm install <module_name> --save
 ```
