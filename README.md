@@ -1,5 +1,5 @@
 # SSiE
-Specialty Subject in English (SSiE) helps non-native speakers study specialty subject in English
+Specialty Studies in English (SSiE) helps non-native speakers study specialty subject in English
 <br><br>
 SSiE was built using [Express](https://expressjs.com/en/starter/generator.html) framework that comes with many built-in node modules.
 Some additional modules needed to be installed are <br>
