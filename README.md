@@ -20,5 +20,5 @@ npm install <module_name> --save
 ```
 SSiE uses [Oxford Dictionary API](https://developer.oxforddictionaries.com/) services so you need to sign up in order to get the API ID and key. For research purposes you can apply for the free package. Visit their website for more info.<br>
 
-<br>For more explanation please read the Graduation Thesis.
+<br>For more explanation please read the Graduation Thesis. SSiE has two features, English-English Dictionary (EED) translator and Simplifier. This is currently EED feature only.
 <br>For Simplifier function refer [here](https://github.com/shashiongithub/Sentence-Simplification-ACL14)
