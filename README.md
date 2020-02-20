@@ -2,6 +2,7 @@
 Specialty Studies in English (SSiE) helps non-native speakers study specialty subject in English
 <br><br>
 SSiE was built using [Express](https://expressjs.com/en/starter/generator.html) framework that comes with many built-in node modules.
+It is recommended to install [NodeJS](https://nodejs.org/en/download/) in advance.<br>
 Some additional modules needed to be installed are <br>
 -- body-parser <br>
 -- request <br>
@@ -17,4 +18,7 @@ npm install
 ```
 npm install <module_name> --save
 ```
-SSiE uses [Oxford Dictionary API](https://developer.oxforddictionaries.com/) services so you need to sign up in order to get the API ID and key. For research purposes you can apply for the free package. Visit their website for more info.
+SSiE uses [Oxford Dictionary API](https://developer.oxforddictionaries.com/) services so you need to sign up in order to get the API ID and key. For research purposes you can apply for the free package. Visit their website for more info.<br>
+
+<br>For more explanation please read the Graduation Thesis.
+<br>For Simplifier function refer [here](https://github.com/shashiongithub/Sentence-Simplification-ACL14)
