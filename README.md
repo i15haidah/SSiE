@@ -1,8 +1,8 @@
 # SSiE
 Specialty Studies in English (SSiE) helps non-native speakers study specialty subject in English
 <br><br>
-SSiE was built using [Express](https://expressjs.com/en/starter/generator.html) framework that comes with many built-in node modules.
-It is recommended to install [NodeJS](https://nodejs.org/en/download/) in advance.<br>
+SSiE was built using [Express](https://expressjs.com/en/starter/generator.html) framework on [NodeJS](https://nodejs.org/en/download/) server that comes with many built-in node modules.
+It is recommended to install NodeJS in advance.<br>
 Some additional modules needed to be installed are <br>
 -- body-parser <br>
 -- request <br>
