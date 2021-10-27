@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-//var app = express();
 
 //for use of oxford dictionary api
 var bodyParser = require('body-parser');
@@ -35,50 +34,53 @@ router.post('/entries',function(searchReq, searchRes){
 	console.log('searchInputVal: '+searchInputVal);
 	console.log(postRequest);
 	
+	//sending request to Oxford Dictionary API to obtain definitions
 	var request = https.request(postRequest, function(response){
 		
 		var searchData = "";
 		response.on( "data", function(data) { searchData += data;} );
 		response.on( "end", function(data) {
 			var parsed = JSON.parse(searchData);
-			if (parsed.error!=null){
+			if (parsed.error!=null){ //if there is an error from the definitions
 				var reqNo = searchReq.body.requestNo;
 				var TotalReq = searchReq.body.TotalReq;
 				var objErr = { reqNo:reqNo, TotalReq:TotalReq, id:searchInputVal, error:parsed.error };
-				searchRes.end(JSON.stringify(objErr));
+				searchRes.end(JSON.stringify(objErr));  //stringify to send to client side
 				console.log(objErr);
 			}
-			else{
+			else{ //getting the definitions
 				var sense = parsed.results[0].lexicalEntries[0].entries[0].senses;
 				var id =  parsed.word;
 				var reqNo = searchReq.body.requestNo;
 				var TotalReq = searchReq.body.TotalReq;
 				var objectt = { reqNo:reqNo, TotalReq:TotalReq, id:id , definition:sense } 
-				var qer = JSON.stringify(objectt);
+				var qer = JSON.stringify(objectt);  //stringify to send to client side
 				console.log(objectt);
 				searchRes.end(qer);
 			}
 		});
 	});
-	
+	//error message (e.g. definition not in root word or not available)
 	request.on('error',function(error){
 		console.log('problem with request: ' + error.message);
 	});
 	
-	request.write(JSON.stringify(searchInputVal));
+	request.write(JSON.stringify(searchInputVal));  //send definition to client side
 	
 });
 
+//lemmatizing the words (e.g.: jumping to jump)
 router.post('/lemmas',function (lemmaReq, lemmaRes){
 	console.log(lemmaReq.body);
 	var arrList = lemmaReq.body;
-	var NewarrList =[];
+	var NewarrList =[];  //creating new list of words
 	for (var i=0; i<arrList.length; i++){
-		var word = arrList[i].wordId.toLowerCase();
+		var word = arrList[i].wordId.toLowerCase();  //change the words to lower case
 		var wordV = lemmatize.verb(word);
 		var wordN = lemmatize.noun(word);
 		var wordA = lemmatize.adjective(word);
 		
+		//adding the lemmatized words to the new list
 		if (word!==wordV){
 			NewarrList[i] = {wordID:wordV};
 			//continue;
@@ -92,7 +94,7 @@ router.post('/lemmas',function (lemmaReq, lemmaRes){
 			NewarrList[i] = {wordID:word};
 			//continue;
 		}
-	}//for
+	}
 	
 	console.log(NewarrList);
 	lemmaRes.end(JSON.stringify(NewarrList));
