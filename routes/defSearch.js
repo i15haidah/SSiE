@@ -11,8 +11,8 @@ var lemmatize = require('wink-lemmatizer');
 var rootCas = require ('ssl-root-cas/latest').inject();
 https.globalAgent.options.cs = rootCas;
 
-var app_id = "c471c6c7"; // insert your APP Id
-var app_key = "7dba9e30abd5656dc4be42fec3094b47"; // insert your APP Key
+var app_id = "*****"; // insert your APP Id
+var app_key = "*****"; // insert your APP Key
 var fields = "definitions";
 var strictMatch = "false";
 
