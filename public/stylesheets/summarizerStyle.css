@@ -1,0 +1,199 @@
+﻿/*--------------------menu---------------------
+body {margin:0;}
+
+.icon-bar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.icon-bar a {
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 36px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #20B2AA;
+}
+/*------------------end of menu----------------*/
+
+.start {
+	color:#1FB28D;
+	font-size:15px;
+	font-family:Arial;
+	margin-left:30px;
+	text-align:left;
+}
+
+.title {
+	margin-left: 10px;
+	color: #1F8DB2;
+	font-family:Arial;
+	}
+
+.explain {
+	margin-left: 10px;
+	color: #1F8DB2;
+	font-family:Arial;
+	}
+
+.start2{
+	margin-left: 180px;
+	color: #1F8DB2;
+	font-family: Arial;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.explain2{
+	margin-left: 30px;
+	color: #1FB28D;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+/*------------------------read button----------------------------*/
+body::before {
+  display: none;
+}
+.typ-subhed {
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+.ctrl-standard.fx-bubbleUp {
+  color: #1FB28D;
+  border-color: #1FB28D;
+}
+.ctrl-standard.fx-bubbleUp::after {
+  top: auto;
+  border-radius: $right-val1 $left-val1 0 0/$right-val2 $left-al2 0 0;
+  background: #1FB28D;
+}
+[class*="ctrl-"] {
+  padding: 5ox 10px;
+  border-radius: 2px;
+  border: 1px solid #1F8DB2;
+}
+[class*="ctrl-"][class*="fx-"]:hover,
+[class*="ctrl-"][class*="fx-"].active {
+  color: #FFFFFF;
+}
+  [class*="fx-"],
+[class*="fx-"]:hover {
+    transition: color 0.5s  ease-in-out;
+  }
+  [class*="fx-"]:not(.fx-dyna) {
+    position: relative;
+    z-index: 1;
+    transition-delay: 0.2s !important;
+    overflow: hidden;
+  }
+  [class*="fx-"]:not(.fx-dyna)::after,
+[class*="fx-"]:not(.fx-dyna)::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+  }
+  [class*="fx-bubble"]::after {
+    transition: height 0.5s ease-in-out;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+  }
+  [class*="fx-bubble"]:hover::after,
+[class*="fx-bubble"].active::after {
+    transition: height 0.5s ease-in-out;
+    height: 300%;
+  }
+  [class*="fx-bubble"]:disabled:hover::after {
+    height: 0;
+  }
+/*---------------------end read button--------------------------*/
+/*
+#op50{
+	margin-left: 30px;
+}
+
+#op30{
+	margin-left: 30px;
+}
+
+#op25{
+	margin-left: 30px;
+}
+
+#op10{
+	margin-left: 30px;
+}
+
+#op5{
+	margin-left: 30px;
+}
+*/
+
+#myform2{
+	margin-left: 60px;
+}
+
+#textinput {
+	width: 90%;
+	height: 200px;
+	padding: 12px 20px;
+	box-sizing: border-box;
+	border: 2px solid #20B2AA;
+	border-radius: 4px;
+	background-color: #ffe6e9;
+	font-size: 16px;
+	margin-top: 10px;
+	margin-left: 50px;
+}
+
+#sentLabel{
+	color:#1FB28D;
+	font-size: 16px;
+	margin-top: 10px;
+	margin-left: 30px;
+}
+
+#sentNo {
+	padding: 6px 1px;
+	box-sizing: border-box;
+	border: 2px solid #20B2AA;
+	border-radius: 4px;
+	background-color: #ffe6e9;
+	font-size: 16px;
+	margin-top: 10px;
+}
+
+#readButton{
+	margin-left: 180px;
+}
+
+#hehe {
+	margin-top: 50px;
+	margin-left: 30px;
+	color: #1F8DB2;
+	font-size:15px;
+	font-family:Arial;
+	text-align:left;
+}
+
+#info {
+	font-size: 15px;
+	font-weight: bold;
+}
