@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <% include partials/head %> 
+ <% include partials/head %>
  <link rel="stylesheet" type="text/css" href="/stylesheets/summarizerStyle.css">
-<script src="/javascripts/dicTransScript.js"></script>
+<script src="/javascripts/summarizerScript.js"></script>
 </head>
 <body>
 <% include partials/menu %>
@@ -11,9 +11,29 @@
 <h1 class="title">Summarizer!</h1>
 <h3 class="explain">Summarize your text by reading and finding the main points so you can skip the unnecessary information and grasp the gist of your text to understand it easier </h3>
 <p class="start">Enter the text to be processed: </p>
-<textarea rows="6" cols="100" class="text_input" id="textinput"></textarea>
-<input type="button" onclick="getString()" value="Read">
-<p id="poutput"></p>
+<textarea rows="10" cols="200" class="text_input" id="textinput"></textarea>
+<button type="button" onclick="document.getElementById('textinput').value=''"> Clear </button>
+<br>
+<form id="myform1">
+<label id="sentLabel" for="numOfSent">Enter Number of Sentences:</label>
+<input type="number" id="sentNo" name="sentNo" min="1">
+</form>
+<h4 class="start2"> OR </h4>
+<p class="explain2">Choose how much to reduce the paragraph to:</p>
+<form id="myform2">
+<input type="radio" id="op50" name="summLength" value="50"> 50%<br>
+<input type="radio" id="op30" name="summLength" value="30"> 30%<br>
+<input type="radio" id="op25" name="summLength" value="25"> 25% (default)<br>
+<input type="radio" id="op10" name="summLength" value="10"> 10%<br>
+<input type="radio" id="op5" name="summLength" value="5"> 5%
+<br><br>
+</form>
+<button class="ctrl-standard typ-subhed fx-bubbleUp" id="readButton" onclick="getString()">READ</button><br><br>
+
+<p>Summary:</p>
+<div id="poutput">
+<div id="hehe"></div>
+</div>
 
 </body>
 <% include partials/script %>
