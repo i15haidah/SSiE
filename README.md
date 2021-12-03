@@ -24,6 +24,6 @@ SSiE uses [Oxford Dictionary API](https://developer.oxforddictionaries.com/) ser
 
 <br>For more explanation please read the Graduation Thesis. SSiE has two features, English-English Dictionary (EED) translator and Simplifier. This is currently EED feature only.<br><br>
 
-#Update
+# Update
 As of 3rd December 2021, the Summarizer/Simplifier function has been updated.<br>
 The Simplifier function is based on the [PageRank](https://en.wikipedia.org/wiki/PageRank) algorithm. For more info read the Wikipage.
